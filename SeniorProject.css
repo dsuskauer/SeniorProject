@@ -1,86 +1,88 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
-
-
-
-/*---Media Queries --*/
-@media (max-width: 992px) {
-
-}
-@media (max-width: 768px) {
-
-}
-@media (max-width: 576px) {
-
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-
-/*---Firefox Bug Fix --*/
-.carousel-item {
-    transition: -webkit-transform 0.5s ease;
-    transition: transform 0.5s ease;
-    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-    -webkit-backface-visibility: visible;
-    backface-visibility: visible;
-}
-/*--- Fixed Background Image --*/
-figure {
-    position: relative;
-    width: 100%;
-    height: 60%;
-    margin: 0!important;
-}
-.fixed-wrap {
-    clip: rect(0, auto, auto, 0);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-#fixed {
-    background-image: url('img/mac.png');
-    position: fixed;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center center;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    will-change: transform;
-}
-/*--- Bootstrap Padding Fix --*/
-[class*="col-"] {
-    padding: 1rem;
+.header
+{
+    height: 20%;
 }
 
+.navbar-style
+{
+    box-shadow: 0 5px 10px #efefef;
+    text-transform: uppercase;
+}
+/* setting size and padding of the logo */
+.logo
+{
+    height: 180px;
+    padding: 2px 10px;
+}
+
+/* bringing the navbar down to be even with logo */
+.navbar-nav {
+    padding-top: 10%;
+
+}
+
+/* color of navbar icon to dark orange */
+.icon-bar
+{
+    background: darkorange;
+}
+/* color of navbar menu text to black */
+li a
+{
+    color: #333;
+}
+
+/* setting font and color of big-text */
+.big-text
+{
+    font-size: 52px;
+    margin: 20px 0;
+    color: darkorange;
 
 
+}
+/* formatting size and border of buttons */
+a.btn
+{
+    margin: 30px 10px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
 
+}
 
-/*
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
+/* making the first button dark solid orange with white font */
+a.btn-first
+{
+    background-color: darkorange;
+    color: #fff;
 
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
+}
 
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
+/* making second button transparent with orange outline and black font */
+a.btn-second
+{
+    background: transparent;
+    border: 1px solid darkorange;
+    color: black;
+}
 
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
+a.btn:hover
+{
+    background: darkorange;
+    border: none;
+    color: #fff;
+    box-shadow: 5px 5px 10px #999;
+    transition: 0.3s;
+}
 
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
-
-
-
-
-
-
-
-
+a.container_2
+{
+    padding:10%;
+}
