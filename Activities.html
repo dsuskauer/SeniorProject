@@ -3,6 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Senior Web: An App for the Ages</title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCi4eEHrAP_3324jjQ4pT3Uy3Wc-cXPo3g",
+            authDomain: "seniorweb-f68b8.firebaseapp.com",
+            databaseURL: "https://seniorweb-f68b8.firebaseio.com",
+            projectId: "seniorweb-f68b8",
+            storageBucket: "seniorweb-f68b8.appspot.com",
+            messagingSenderId: "310635174358"
+        };
+        firebase.initializeApp(config);
+    </script>
     <link rel="stylesheet" type="text/css" href="SeniorProject.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -26,7 +40,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href=""><img class="logo" src="C:\Users\Devon\Desktop\Images\The meeting place logo.png">
+                <a href=""><img class="logo" src="https://lh3.googleusercontent.com/-lkXs-zRIPvc/XAHPwenxR_I/AAAAAAAAB44/QlLgc6yJpOwpMZxOdvHcqCMM9rrjvfVLgCL0BGAs/w530-d-h379-n-rw/The%2Bmeeting%2Bplace%2Blogo.png">
                 </a>
             </div>
             <!-- making the navbar menu and making it collapsible -->
@@ -35,7 +49,7 @@
                     <li><a href="SeniorProject.html">Home</a></li>
                     <li  class = "active"><a href="">Activities</a></li>
                     <li><a href="Cafeteria%20Menu.html">Cafeteria Menu</a></li>
-                    <li><a href="Monthly%20Events.html">Event Calendar</a></li>
+                    <li><a href="Monthly%20Events.html">Upcoming Events</a></li>
                     <li><a href="Volunteer%20Portal.html">Volunteer Portal</a></li>
                 </ul>
             </div>
@@ -46,92 +60,91 @@
 
 </header>
 
-<div class = "container" padding="10px">
+<div class = "container col-sm-auto" padding="10px">
 
     <!--table tennis icon-->
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-
-            <div class="col-lg-4">
-                <img src="https://img.icons8.com/ios-glyphs/50/000000/table-tennis.png">
+    <div class="col-xs-4">
+        <div class="col-xs-4">
+                <img  src="https://img.icons8.com/ios-glyphs/50/000000/ping-pong.png">
             </div>
 
     <!--billiards icon-->
-    <div class="col-lg-4">
+    <div class="col-xs-4">
             <img src="https://img.icons8.com/doodle/48/000000/billiard-ball.png">
     </div>
 
 
     <!--gym icon-->
-            <div class="col-lg-4">
+            <div class="col-xs-4">
     <img src="https://img.icons8.com/metro/50/000000/dumbbell.png">
             </div>
 
     <!--dominoes icon-->
-            <div class="col-lg-4">
-    <img src="https://img.icons8.com/carbon-copy/100/000000/domino.png">
+            <div class="col-xs-4">
+    <img src="https://img.icons8.com/carbon-copy/75/000000/domino.png">
             </div>
 
     <!--bridge (cards) icon-->
-            <div class="col-lg-4">
+            <div class="col-xs-4">
     <img src="https://img.icons8.com/ios/50/000000/cards.png">
             </div>
 
     <!--bingo icon-->
-            <div class="col-lg-4">
+            <div class="col-xs-4">
     <img src="https://img.icons8.com/ios/50/000000/bingo.png">
             </div>
 
     <!--art therapy icon-->
-            <div class="col-lg-4">
+            <div class="col-xs-4">
     <img src="https://img.icons8.com/ios/50/000000/paint-palette.png">
             </div>
 
     <!--ceramics icon-->
-            <div class="col-lg-4">
+            <div class="col-xs-4">
     <img src="https://img.icons8.com/ios/50/000000/potters-wheel.png">
             </div>
 
     <!--yoga icon-->
-            <div class="col-lg-4">
+            <div class="col-xs-4">
     <img src="https://img.icons8.com/ios/50/000000/guru.png">
             </div>
 
     <!--library icon-->
-            <div class="col-lg-4">
+            <div class="col-xs-4">
     <img src="https://img.icons8.com/ios/50/000000/book.png">
             </div>
 
     <!--puzzle icon-->
-            <div class="col-lg-4">
+            <div class="col-xs-4 padding-top=10px" >
     <img src="https://img.icons8.com/ios/50/000000/puzzle.png">
             </div>
 
     <!--movie icon-->
-            <div class="col-lg-4 container_2">
+            <div class="col-xs-4">
     <img src="https://img.icons8.com/ios/50/000000/clapperboard.png">
             </div>
 
     <!--computer icon-->
-            <div class="col-lg-4">
+            <div class="col-xs-4">
     <img src="https://img.icons8.com/ios/50/000000/monitor.png">
             </div>
 
     <!--zumba icon-->
-            <div class="col-lg-4">
+            <div class="col-xs-4">
     <img src="https://img.icons8.com/ios/50/000000/dancing.png">
             </div>
 
     <!--special event icon-->
-            <div class="col-lg-4">
+            <div class="col-xs-4">
     <img src="https://img.icons8.com/ios/50/000000/calendar.png">
             </div>
-        </div>
+
     </div>
 </div>
 
 
-<p > this is the activities page </p
+
+<p> this is the activities page </p>
 
 
 </body>

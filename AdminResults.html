@@ -17,6 +17,7 @@
         };
         firebase.initializeApp(config);
     </script>
+
     <link rel="stylesheet" type="text/css" href="SeniorProject.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -30,7 +31,7 @@
 </head>
 <body>
 
-
+<!--header with logo and navbar-->
 <header class="header">
     <nav class="navbar navbar-style">
         <div class="container">
@@ -48,9 +49,9 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="SeniorProject.html">Home</a></li>
                     <li><a href="Activities.html">Activities</a></li>
-                    <li><a href="Cafeteria%20Menu.html">Cafeteria Menu</a></li>
+                    <li class = "active"><a href="">Cafeteria Menu</a></li>
                     <li><a href="Monthly%20Events.html">Upcoming Events</a></li>
-                    <li class = "active"><a href="">Volunteer Portal</a></li>
+                    <li><a href="Volunteer%20Portal.html">Volunteer Portal</a></li>
                 </ul>
             </div>
         </div>
@@ -60,29 +61,30 @@
 
 </header>
 
-<h1>Thank you for volunteering! You are greatly appreciated!</h1>
+<!--Getting Volunteer Information from Database-->
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-2">
 
-<br>
-<br>
+            <h1> Name:</h1> <h2  id = name></h2>
+            <h1> Miles Driven:</h1> <h2 id =milesDriven> </h2>
+            <h1> Hours Volunteered:</h1> <h2 id = hoursVolunteered></h2>
 
 
+            <script> document.getElementById("name").innerHTML = getVolunteerInfo()[0]</script>
+            <script> document.getElementById("milesDriven").innerHTML=getVolunteerInfo()[1]</script>
+            <script> document.getElementById("hoursVolunteered").innerHTML=getVolunteerInfo()[2]</script>
+        </div>
+        <div class="col-md-auto">
 
-<!--input volunteer information into the database-->
-<form id="volunteerInput">
-    <div class="form-group col-md-6">
-        Please Enter Username:<input  type="text" placeholder="username"><br>
-        Please Enter Name:<input  type="text" placeholder="name"><br>
-        Please Enter Hours Volunteered:<input  type="text" placeholder="hoursVolunteered"><br>
-        Please Enter Miles Driven: <input type="text" placeholder="milesDriven">
+        </div>
+
+
     </div>
-</form>
-<div class="form-group">
-    <button onclick="addVolunteer()" class="btn btn-default btn-lg">
-        Submit
-    </button>
-</div>
-
-
-
+    <!--create button to go back to the admin view-->
+<button>
+    <a href ="AdminView.html"> Click Here to Go Back to Admin View</a>
+</button>
+   </div>
 </body>
 </html>
