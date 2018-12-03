@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Senior Web: An App for the Ages</title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCi4eEHrAP_3324jjQ4pT3Uy3Wc-cXPo3g",
+            authDomain: "seniorweb-f68b8.firebaseapp.com",
+            databaseURL: "https://seniorweb-f68b8.firebaseio.com",
+            projectId: "seniorweb-f68b8",
+            storageBucket: "seniorweb-f68b8.appspot.com",
+            messagingSenderId: "310635174358"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <link rel="stylesheet" type="text/css" href="SeniorProject.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src = "app.js"></script>
+
+</head>
+<body>
+
+
+<header class="header">
+    <nav class="navbar navbar-style">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menuIcon">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href=""><img class="logo" src="https://lh3.googleusercontent.com/-lkXs-zRIPvc/XAHPwenxR_I/AAAAAAAAB44/QlLgc6yJpOwpMZxOdvHcqCMM9rrjvfVLgCL0BGAs/w530-d-h379-n-rw/The%2Bmeeting%2Bplace%2Blogo.png">
+                </a>
+            </div>
+            <!-- making the navbar menu and making it collapsible -->
+            <div class="collapse navbar-collapse" id="menuIcon">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="SeniorProject.html">Home</a></li>
+                    <li  class = "active"><a href="">Activities</a></li>
+                    <li><a href="Cafeteria%20Menu.html">Cafeteria Menu</a></li>
+                    <li><a href="Monthly%20Events.html">Upcoming Events</a></li>
+                    <li><a href="Volunteer%20Portal.html">Volunteer Portal</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+</header>
+<form id="ActivityInput">
+<div class = "container col-lg-auto">
+
+    <h2> Activities:</h2>
+    <!--ping-pong icon-->
+    <div class="col-xs-4">
+
+                <img  src="https://img.icons8.com/ios-glyphs/50/000000/ping-pong.png"><br>
+
+            Ping-Pong:<input  type="checkbox" value="0" onchange="addPrior(event)" placeholder="ping-pong"><br>
+            </div>
+
+    <!--billiards icon-->
+    <div class="col-xs-4">
+            <img src="https://img.icons8.com/doodle/48/000000/billiard-ball.png"><br>
+        Billiards:<input  type="checkbox" value="1" onchange="addPrior(event)" placeholder="billiards"><br>
+    </div>
+
+
+    <!--gym icon-->
+            <div class="col-xs-4">
+    <img src="https://img.icons8.com/metro/50/000000/dumbbell.png"><br>
+                Gym:<input  type="checkbox" value="2" onchange="addPrior(event)" placeholder="gym"><br>
+            </div>
+
+    <!--dominoes icon-->
+            <div class="col-xs-4">
+    <img src="https://img.icons8.com/carbon-copy/75/000000/domino.png"><br>
+                Dominoes:<input  type="checkbox" value="3" onchange="addPrior(event)" placeholder="dominoes"><br>
+            </div>
+
+    <!--bridge (cards) icon-->
+            <div class="col-xs-4">
+    <img src="https://img.icons8.com/ios/50/000000/cards.png"><br>
+                Bridge:<input  type="checkbox" value="4" onchange="addPrior(event)" placeholder="bridge"><br>
+            </div>
+
+    <!--bingo icon-->
+            <div class="col-xs-4">
+    <img src="https://img.icons8.com/ios/50/000000/bingo.png"><br>
+                Bingo:<input  type="checkbox" value="5" onchange="addPrior(event)" placeholder="bingo"><br>
+            </div>
+
+    <!--art therapy icon-->
+            <div class="col-xs-4">
+    <img src="https://img.icons8.com/ios/50/000000/paint-palette.png"><br>
+                Art Therapy:<input  type="checkbox" value="6" onchange="addPrior(event)" placeholder="art therapy"><br>
+            </div>
+
+    <!--ceramics icon-->
+            <div class="col-xs-4">
+    <img src="https://img.icons8.com/ios/50/000000/potters-wheel.png"><br>
+                Ceramics:<input  type="checkbox" value="7" onchange="addPrior(event)" placeholder="ceramics"><br>
+            </div>
+
+    <!--yoga icon-->
+            <div class="col-xs-4">
+    <img src="https://img.icons8.com/ios/50/000000/guru.png"><br>
+                Yoga:<input  type="checkbox" value="8" onchange="addPrior(event)" placeholder="yoga"><br>
+            </div>
+
+    <!--library icon-->
+            <div class="col-xs-4">
+    <img src="https://img.icons8.com/ios/50/000000/book.png"><br>
+                Library:<input  type="checkbox" value="9" onchange="addPrior(event)" placeholder="library"><br>
+            </div>
+
+    <!--puzzle icon-->
+            <div class="col-xs-4 padding-top=10px" >
+    <img src="https://img.icons8.com/ios/50/000000/puzzle.png"><br>
+                Puzzles:<input  type="checkbox" value="10" onchange="addPrior(event)" placeholder="puzzles"><br>
+            </div>
+
+    <!--movie icon-->
+            <div class="col-xs-4">
+    <img src="https://img.icons8.com/ios/50/000000/clapperboard.png"><br>
+                Movie:<input  type="checkbox" value="11" onchange="addPrior(event)" placeholder="movie"><br>
+            </div>
+
+    <!--computer icon-->
+            <div class="col-xs-4">
+    <img src="https://img.icons8.com/ios/50/000000/monitor.png"><br>
+                Computer:<input  type="checkbox" value="12" onchange="addPrior(event)" placeholder="computer"><br>
+            </div>
+
+    <!--zumba icon-->
+            <div class="col-xs-4">
+    <img src="https://img.icons8.com/ios/50/000000/dancing.png"><br>
+                Zumba:<input  type="checkbox" value="13" onchange= "addPrior(event)" placeholder="zumba"><br>
+            </div>
+
+    <!--special event icon-->
+            <div class="col-xs-4">
+    <img src="https://img.icons8.com/ios/50/000000/calendar.png"><br>
+                Special Event:<input  type="checkbox" value="14" onchange= "addPrior(event)" placeholder="special event"><br>
+            </div>
+
+
+    <!--will you be eating lunch with us?-->
+    <!--<h2>-->
+        <!--<div class="col-lg-12">-->
+            <!--Will You Be Eating Lunch With Us Today? <input  type="checkbox" value="15" onchange= "addPrior(event)" placeholder="eatingMeal"><br>-->
+        <!--</div>-->
+    <!--</h2>-->
+
+    </div>
+
+
+</form>
+
+
+
+
+<!--input Activities information into the database-->
+<form>
+    <div class = "container2 col-sm-auto">
+        <button onclick="getAddActivity()" class="btn btn-default btn-lg">
+            Submit
+        </button>
+    </div>
+</form>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</body>
+</html>
