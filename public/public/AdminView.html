@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:Activities="http://www.w3.org/1999/xhtml" xmlns:For="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Senior Web: An App for the Ages</title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCi4eEHrAP_3324jjQ4pT3Uy3Wc-cXPo3g",
+            authDomain: "seniorweb-f68b8.firebaseapp.com",
+            databaseURL: "https://seniorweb-f68b8.firebaseio.com",
+            projectId: "seniorweb-f68b8",
+            storageBucket: "seniorweb-f68b8.appspot.com",
+            messagingSenderId: "310635174358"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <link rel="stylesheet" type="text/css" href="SeniorProject.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src = "app.js"></script>
+</head>
+
+
+
+<header class="header">
+    <nav class="navbar navbar-style">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menuIcon">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href=""><img class="logo" src="https://lh3.googleusercontent.com/-lkXs-zRIPvc/XAHPwenxR_I/AAAAAAAAB44/QlLgc6yJpOwpMZxOdvHcqCMM9rrjvfVLgCL0BGAs/w530-d-h379-n-rw/The%2Bmeeting%2Bplace%2Blogo.png">
+                </a>
+            </div>
+            <!-- making the navbar menu and making it collapsible -->
+            <div class="collapse navbar-collapse" id="menuIcon">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Activities.html">Activities</a></li>
+                    <li><a href="Cafeteria%20Menu.html">Cafeteria Menu</a></li>
+                    <li><a href="Monthly%20Events.html">Upcoming Events</a></li>
+                    <li><a href="Volunteer%20Portal.html">Volunteer Portal</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+</header>
+
+<!-- input meals to database from admin view-->
+<form id="mealInput">
+<div class="form-group col-md-6">
+    Please Enter Date:<input  type="text" placeholder="Date (in Month-Day-Year format)"><br>
+    Please Enter Description of Meal:<input  type="text" placeholder="Description"><br>
+    Please Enter Cost:<input  type="text" placeholder="Cost"><br>
+</div>
+</form>
+<div class="form-group">
+    <button onclick="addMeal()" class="btn btn-default btn-lg">
+        Click here
+    </button>
+</div>
+
+<!--search meals by date-->
+<form id="searchMealDate">
+    <div class="form-group col-md-6">
+        Please Enter Date:<input  type="text" placeholder="Date (in Month-Day-Year format)"><br>
+
+    </div>
+    <button onclick="getDescription()" class="btn btn-default btn-lg">
+        Click here (to find meal)
+    </button>
+</form>
+
+<!--search volunteer information by username-->
+<form id="searchVolunteerInfo">
+    <div class="form-group col-md-6">
+        Please Enter Username:<input  type="text" placeholder="username"><br>
+
+    </div>
+    <script>
+        console.log("test2");
+    </script>
+
+</form>
+
+<button onclick= "transmitName()" class="btn btn-default btn-lg">
+    Submit (volunteer info)
+</button>
+
+
+<!--search user activities selected for the day-->
+<form id="searchUserActivities">
+    <div class = "form-group-col-md-6">
+         Please Enter the Date You Wish to View Activities For: <input  type="text" placeholder="date"><br>
+    </div>
+    <br>
+    <div class = "form-group-col-md-6">
+        Please Enter the Activity Name You Wish to View Stats For: <input  type="text" placeholder="activity name"><br>
+    </div>
+
+</form>
+
+<button onclick= " getActivities()" class="btn btn-default btn-lg">
+    Submit (Activities by date)
+</button>
+
+
+
+
+
+<!--getting garbage from database-->
+<!--<div class="form-group">-->
+
+
+    <!--<div class="col col-lg-2">-->
+        <!--Description: <p id=Description></p>-->
+        <!--<script>document.getElementById("Description").innerHTML = getData()</script>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<!--input activities into the database from admin view-->
+<!--<form id="activityInput">-->
+    <!--<div class="form-group col-md-6">-->
+        <!--Please Enter Date:<input  type="text" placeholder="Date (in Month-Day-Year format)"><br>-->
+        <!--Please Enter Description of Activity:<input  type="text" placeholder="Description"><br>-->
+
+    <!--</div>-->
+<!--</form>-->
+<!--<div class="form-group">-->
+    <!--<button onclick="addActivity()" class="btn btn-default btn-lg">-->
+        <!--Click here-->
+    <!--</button>-->
+<!--</div>-->
+
+<!--<form id="searchActivityDate">-->
+    <!--<div class="form-group col-md-6">-->
+        <!--Please Enter Date:<input  type="text" placeholder="Date (in Month-Day-Year format)"><br>-->
+
+    <!--</div>-->
+    <!--<button onclick="getDescription()" class="btn btn-default btn-lg">-->
+        <!--Click here-->
+    <!--</button>-->
+<!--</form>-->
+
+
+
+
+
+
+</body>
+</html>
